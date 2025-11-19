@@ -1,17 +1,28 @@
 #ifndef MAIN_H
 #define MAIN_H
-#include <stdio.h>
-#include <stdlib.h>
-#include <math.h>
-#include <string.h>
-#include <ctype.h>
-#include <time.h>
-#include <float.h>
-#include <limits.h>
-#include <wctype.h>
+
 #include <stdarg.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <limits.h>
 #include <unistd.h>
 
-int _printf(const char *format, ...);
+/**
+ * struct fmt - Struct for format specifiers
+ * @spec: The format specifier character
+ * @func: The function associated with the specifier
+ */
+typedef struct fmt
+{
+	char spec;
+	int (*func)(va_list);
+} fmt_t;
 
-#endif /* MAIN_H */
+int _printf(const char *format, ...);
+int _putchar(char c);
+int print_char(va_list args);
+int print_string(va_list args);
+int print_percent(va_list args);
+int print_int(va_list args);
+
+#endif
