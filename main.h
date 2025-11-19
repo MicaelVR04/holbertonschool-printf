@@ -8,7 +8,7 @@
 #include <time.h>
 #include <float.h>
 #include <limits.h>
-#include <wctype.h>i
+#include <wctype.h>
 #include <stdarg.h>
 #include <unistd.h>
 
