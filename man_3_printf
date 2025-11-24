@@ -74,4 +74,4 @@ _printf("Percent: %%\n");
 printf(3)
 
 .SH AUTHORS
-Kris, Jul, and Koralys — Holberton School
+koralys and micael — Holberton School
